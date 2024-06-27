@@ -10,7 +10,7 @@ questions = [
     {
         type:"input",
         message:"What color do you want your logo to be?",
-        name:"color"
+        name:"fill"
     },
     {
         type:"list",
