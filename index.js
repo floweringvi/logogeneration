@@ -24,3 +24,4 @@ function init() {
     .prompt(questions)
     .then(answers => shape.createSVG(answers))
 }
+init();
