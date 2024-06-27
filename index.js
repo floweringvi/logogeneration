@@ -27,19 +27,20 @@ function init() {
     .prompt(questions)
     .then((answers) => {
         if (answers['shape'] === 'Circle') {
-            circle = new Circle(answers.fill, answers.text) 
-            circle.generateSVG(); 
+            shape = new Circle(answers.fill, answers.text) 
+            // circle.generateSVG(); 
         } else if (answers['shape'] === 'Square') {
-            square = new Square(answers.fill, answers.text) 
-            square.generateSVG();
+            shape = new Square(answers.fill, answers.text) 
+            // square.generateSVG();
         } else {
-            triangle = new Triangle(answers.fill, answers.text)
-            triangle.generateSVG();
+            shape = new Triangle(answers.fill, answers.text)
+            // triangle.generateSVG();
         }
+        return shape
     })
-    .then((newSVG) => {
-        fs.writeFile('logo.svg', JSON.stringify(newSVG), (err) => {err ? console.error(err) : console.log("created!")})})
-
+    .then((shape) => {
+        fs.writeFile('logo.svg', `${shape}`.generateSVG(), (err) => {err ? console.error(err) : console.log("created!")})})
+//What can be done i'm stumped
     
 }
 init();
