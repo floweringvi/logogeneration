@@ -25,6 +25,7 @@
 
    By answering questions you've been prompted to answer, you will build your own personal README for your own project.  
    ![Screenshot of terminal](./assets/terminalss.png)  
+   https://watch.screencastify.com/v/3HZCvqR4fHNKZ6dflpEL 
 
   ##Contributors
 
