@@ -38,29 +38,9 @@ function init() {
                 case "Triangle": shape = new Triangle(answers.fill, answers.text)
                     SVGtext = shape.generate()
             }
-            // if (answers.shape === 'Circle') {
-            //     console.log("circle")
-            //     shape = new Circle(answers.fill, answers.text) 
-            //     SVGtext = shape.generateSVG()
-            //     // circle.generateSVG(); 
-            // } else if (answers.shape=== 'Square') {
-            //     shape = new Square(answers.fill, answers.text) 
-            //     // square.generateSVG();
-            //     SVGtext = shape.generateSVG()
-            // } else {
-
-            //     shape = new Triangle(answers.fill, answers.text)
-            //     SVGtext = shape.generateSVG()
-            //     // console.log(shape instanceof Triangle)
-            //     // triangle.generateSVG();
-            //     // console.log(shape.generateSVG())
-            // }
+         
             fs.writeFile('logo.svg', SVGtext, (err) => { err ? console.error(err) : console.log("created!") })
         })
 }
-// .then((shape) => {
-//     fs.writeFile('logo.svg', SVGtext, (err) => {err ? console.error(err) : console.log("created!")})})
-//What can be done i'm stumped
 
-// }
 init();
